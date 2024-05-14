@@ -44,6 +44,21 @@ DEP_LD_FLAGS="-L${BUILD_DIR_EXTERNAL}/${ANDROID_ABI}/lib $FFMPEG_EXTRA_LD_FLAGS"
   --enable-shared \
   --disable-static \
   --disable-vulkan \
+  --disable-encoders \
+  --disable-muxers \
+  --disable-protocols \
+  --enable-protocol=file \
+  --disable-filters  \
+  --disable-bsfs \
+  --disable-hwaccels \
+  --disable-devices \
+  --disable-debug \
+  --disable-decoders \
+  --disable-postproc \
+  --disable-network \
+  --disable-parsers \
+  --disable-demuxers \
+  --enable-demuxer=aac,flac,mp3,ogg,wav,avi,matroska,webm,mov,mp4,m4a \
   --pkg-config=${PKG_CONFIG_EXECUTABLE} \
   ${EXTRA_BUILD_CONFIGURATION_FLAGS} \
   $ADDITIONAL_COMPONENTS || exit 1
